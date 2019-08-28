@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">PosyanduKU</string>
+    <string name="note">Note</string>
+    <string name="data_balita">Data Anak</string>
+    <string name="profile">Profile</string>
+    <string name="about">About</string>
+    <string name="jadwal_imunisasi">Jadwal Imunisasi</string>
+    <string name="add_note">isi note</string>
+    <string name="anak">Anak</string>
+    <string name="bapak">Bapak</string>
+    <string name="ibu">Ibu</string>
+    <string name="username_required">You must enter a username</string>
+</resources>
