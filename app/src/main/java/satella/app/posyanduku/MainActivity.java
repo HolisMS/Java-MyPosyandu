@@ -5,10 +5,12 @@ import androidx.viewpager.widget.ViewPager;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.tabs.TabLayout;
@@ -20,11 +22,14 @@ import java.util.List;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import satella.app.posyanduku.about.AboutActivity;
 import satella.app.posyanduku.adapter.SliderPagerAdapter;
 import satella.app.posyanduku.data_pages.DataBalitaActivity;
+import satella.app.posyanduku.jadwal_anak.JadwalAnakActivity;
 import satella.app.posyanduku.login.LoginActivity;
 import satella.app.posyanduku.models.Slider;
 import satella.app.posyanduku.note.NoteActivity;
+import satella.app.posyanduku.profile.ProfilAnakActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -83,6 +88,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Intent intent = new Intent(MainActivity.this, DataBalitaActivity.class);
             startActivity(intent);
         }
+        else if (v == imgAbout){
+            Intent intent = new Intent(MainActivity.this, AboutActivity.class);
+            startActivity(intent);
+        }
+        else if (v == imgProfil){
+            Intent intent = new Intent(MainActivity.this, ProfilAnakActivity.class);
+            startActivity(intent);
+        }
+        else if (v == imgCalender){
+            Intent intent = new Intent(MainActivity.this, JadwalAnakActivity.class);
+            startActivity(intent);
+        }
     }
 
     class SliderTimer extends TimerTask{
@@ -99,5 +116,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }
             });
         }
+    }
+
+    public boolean doubleTapParam = false;
+    @Override
+    public void onBackPressed() {
+        if (doubleTapParam){
+            super.onBackPressed();
+            return;
+        }
+        this.doubleTapParam = true;
+        Toast.makeText(getApplicationContext(),"Ketuk sekali lagi untuk keluar",Toast.LENGTH_SHORT).show();
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                doubleTapParam = false;
+            }
+        },2000);
     }
 }

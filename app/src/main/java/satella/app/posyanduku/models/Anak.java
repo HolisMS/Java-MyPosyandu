@@ -1,6 +1,8 @@
 package satella.app.posyanduku.models;
 
-public class Anak {
+import java.io.Serializable;
+
+public class Anak implements Serializable {
     private String noKK;
     private String namaLengkap;
     private String namaPanggilan;
@@ -112,5 +114,8 @@ public class Anak {
                 " " + statusLahir +
                 " " + beratBlahir +
                 " " + tinggiBlahir ;
+    }
+    public void getNoKK(String key){
+
     }
 }

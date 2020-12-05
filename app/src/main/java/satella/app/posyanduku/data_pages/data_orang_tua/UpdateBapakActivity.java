@@ -1,8 +1,5 @@
 package satella.app.posyanduku.data_pages.data_orang_tua;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Context;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -12,17 +9,15 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
 import java.util.List;
 
 import satella.app.posyanduku.R;
 import satella.app.posyanduku.firebase_helper.DatabaseHelperBapak;
-import satella.app.posyanduku.models.Anak;
 import satella.app.posyanduku.models.Bapak;
 
 public class UpdateBapakActivity extends AppCompatActivity {

@@ -1,135 +1,264 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".login.RegisterPosyanduActivity">
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/baby"
         android:layout_width="130dp"
         android:layout_height="130dp"
         android:src="@drawable/doctor"
-        android:layout_marginTop="40dp"
-        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
         />
     <TextView
-        android:id="@+id/txtbaby"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Register Posyandu"
-        android:layout_below="@id/baby"
         android:layout_marginTop="10dp"
-        android:layout_centerHorizontal="true"
         android:textColor="@color/teksColorBlack"
         android:textSize="@dimen/titleSize"
+        android:layout_gravity="center"
         />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/username_text_input_layout"
-        android:layout_marginTop="30dp"
-        android:layout_below="@id/txtbaby"
-        android:layout_centerHorizontal="true"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content">
-
-        <EditText
-            android:id="@+id/edt_username_anak"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/username_text_input_layout"
-            android:layout_alignBottom="@+id/username_text_input_layout"
-            android:hint="Username"
-            android:inputType="textEmailAddress"
-            android:maxLength="30"
-            android:maxLines="1" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/email_text_input_layout"
-        android:layout_marginTop="20dp"
-        android:layout_below="@id/username_text_input_layout"
-        android:layout_centerHorizontal="true"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content">
-
-        <EditText
-            android:id="@+id/edt_email_anak"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textEmailAddress"
-            android:hint="Email"
-            android:maxLines="1"
-            android:maxLength="30"
-            />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/txtPass"
-        app:passwordToggleEnabled="true"
-        android:layout_width="300dp"
-        android:layout_marginTop="20dp"
-        android:layout_below="@id/email_text_input_layout"
-        android:layout_centerHorizontal="true"
-        android:layout_height="wrap_content">
-        <EditText
-            android:id="@+id/edt_pass_anak"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textPassword"
-            android:hint="Password"
-            android:maxLines="1"
-            android:maxLength="30"
-            />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <Button
-        android:id="@+id/btn_register_anak"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/txtPass"
-        android:text="Register"
-        android:textAllCaps="false"
-        android:textSize="@dimen/textSize"
-        android:textColor="@android:color/white"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="35dp"
-        android:background="@drawable/custom_button"
-        />
-
     <ProgressBar
-        android:id="@+id/load_anak"
+        android:id="@+id/progres"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
+        android:layout_gravity="center"
         android:visibility="invisible"
         />
 
-    <LinearLayout
-        android:id="@+id/back_posy"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/btn_register_anak"
-        android:layout_marginTop="35dp"
-        android:gravity="center"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Back to"
-            android:textColor="@color/teksColorBlack"
-            android:textSize="@dimen/textSize" />
+            android:orientation="vertical">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=" Sign in"
-            android:textColor="@color/colorAccent"
-            android:textStyle="bold" />
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="300dp"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/edt_email_posy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textEmailAddress"
+                    android:hint="Email"
+                    android:maxLines="1"
+                    android:maxLength="30"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
 
-    </LinearLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                app:passwordToggleEnabled="true"
+                android:layout_width="300dp"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/edt_pass_posy"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:hint="Password"
+                    android:maxLines="1"
+                    android:maxLength="30"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
 
-</RelativeLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="300dp"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/edt_idPosyandu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:hint="ID Posyandu"
+                    android:maxLines="1"
+                    android:maxLength="30"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="300dp"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/edt_nm_posyandu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:hint="Nama Posyandu"
+                    android:maxLines="1"
+                    android:maxLength="30"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="300dp"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/edt_nm_ketua"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:hint="Ketua"
+                    android:maxLines="1"
+                    android:maxLength="30"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="300dp"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/edt_nomer_telp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:hint="No.Telp"
+                    android:maxLines="1"
+                    android:maxLength="30"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="300dp"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/edt_rw"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:hint="RW"
+                    android:maxLines="1"
+                    android:maxLength="30"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="300dp"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/edt_kel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:hint="Kelurahan"
+                    android:maxLines="1"
+                    android:maxLength="30"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>\
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="300dp"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/edt_kec"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:hint="Kecamatan"
+                    android:maxLines="1"
+                    android:maxLength="30"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="300dp"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/edt_kota"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:hint="Kota"
+                    android:maxLines="1"
+                    android:maxLength="30"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="300dp"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/edt_provinsi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPersonName"
+                    android:hint="Provinsi"
+                    android:maxLines="1"
+                    android:maxLength="30"
+                    />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <Button
+                android:id="@+id/btn_register_posy"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:text="Register"
+                android:textAllCaps="false"
+                android:textSize="@dimen/textSize"
+                android:textColor="@android:color/white"
+                android:layout_gravity="center"
+                android:layout_marginTop="35dp"
+                android:background="@drawable/custom_button"
+                />
+
+            <LinearLayout
+                android:id="@+id/back"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Back to"
+                    android:textColor="@color/teksColorBlack"
+                    android:textSize="@dimen/textSize" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" Sign in"
+                    android:textColor="@color/colorAccent"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+
+</LinearLayout>

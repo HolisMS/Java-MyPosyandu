@@ -10,4 +10,6 @@
     <color name="colorKalender">#FFA726</color>
     <color name="teksColorBlack">#292929</color>
     <color name="backgroundFamilly">#EEEEEE</color>
+
+    <color name="colorProfilPosy"></color>
 </resources>

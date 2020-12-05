@@ -1,13 +1,18 @@
 package satella.app.posyanduku.login;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Toast;
 
 import com.google.android.material.tabs.TabLayout;
+
+import java.util.List;
 
 import satella.app.posyanduku.R;
 import satella.app.posyanduku.adapter.LoginPagerAdapter;
@@ -46,4 +51,5 @@ public class LoginActivity extends AppCompatActivity {
         loginPagerAdapter.addFragment(new LoginPosyanduFragment());
         viewPager.setAdapter(loginPagerAdapter);
     }
+
 }

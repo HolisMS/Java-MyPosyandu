@@ -84,6 +84,7 @@ public class RegisterLoginAnakActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(RegisterLoginAnakActivity.this,LoginActivity.class);
                 startActivity(intent);
+                finish();
             }
         });
 
@@ -139,4 +140,6 @@ public class RegisterLoginAnakActivity extends AppCompatActivity {
         edtEmail.setText("");
         edtUsername.setText("");
     }
+
+
 }

@@ -52,15 +52,17 @@
         android:layout_below="@id/username_text_input_layout"
         android:layout_centerHorizontal="true"
         android:layout_height="wrap_content">
+
         <EditText
             android:id="@+id/edt_pass_anak"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textPassword"
+            android:layout_alignStart="@+id/txtPass"
+            android:layout_alignBottom="@+id/txtPass"
             android:hint="Password"
-            android:maxLines="1"
+            android:inputType="textPassword"
             android:maxLength="30"
-            />
+            android:maxLines="1" />
     </com.google.android.material.textfield.TextInputLayout>
     
     <Button

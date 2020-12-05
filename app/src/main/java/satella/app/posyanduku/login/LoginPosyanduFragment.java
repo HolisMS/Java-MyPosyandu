@@ -60,6 +60,7 @@ public class LoginPosyanduFragment extends Fragment {
                                 Intent intent = new Intent(getContext(), PosyanduMainActivity.class);
                                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                                 startActivity(intent);
+                                getActivity().finish();
                                 return;
                             }
                         }).addOnFailureListener(new OnFailureListener() {
@@ -78,6 +79,7 @@ public class LoginPosyanduFragment extends Fragment {
             public void onClick(View v) {
                 Intent intent = new Intent(getContext(), RegisterPosyanduActivity.class);
                 startActivity(intent);
+
             }
         });
 
@@ -108,4 +110,5 @@ public class LoginPosyanduFragment extends Fragment {
             push.setEnabled(true);
         }
     }
+
 }

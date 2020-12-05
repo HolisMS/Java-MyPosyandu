@@ -64,6 +64,7 @@ public class LoginAnakFragment extends Fragment {
                                 Intent intent = new Intent(getContext(), MainActivity.class);
                                 intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                                 startActivity(intent);
+                                getActivity().finish();
                                 return;
                             }
                         }).addOnFailureListener(new OnFailureListener() {
@@ -81,6 +82,7 @@ public class LoginAnakFragment extends Fragment {
             public void onClick(View v) {
                 Intent intent = new Intent(getContext(), RegisterLoginAnakActivity.class);
                 startActivity(intent);
+
             }
         });
 
